@@ -1,0 +1,13 @@
+.todolist {
+  margin: 24px;
+  padding: 24px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  bottom: 1px;
+}
