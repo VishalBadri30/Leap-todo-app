@@ -19,6 +19,9 @@ public class Todo {
     @Column(name = "title")
     private String title;
 
+    @Column(name="description")
+    private String description;
+
     @Column(name = "completed")
     private Boolean completed;
 

@@ -32,10 +32,20 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
       className="list-item"
       key={todo.id}
     >
-      <div className="todo-item">
-        <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag">
-          {todo.title}
-        </Tag>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "50%",
+          alignItems: "center",
+        }}
+      >
+        <div className="todo-item">
+          <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag">
+            {todo.title}
+          </Tag>
+        </div>
+        <b>{todo.description}</b>
       </div>
     </List.Item>
   );

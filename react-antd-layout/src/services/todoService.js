@@ -16,6 +16,7 @@ export const createTodo = (todo) => {
     },
     body: JSON.stringify({
       title: todo.title,
+      description: todo.description,
       completed: todo.completed,
     }),
   }).then((res) => res.json());
@@ -30,6 +31,7 @@ export const updateTodo = (todo) => {
     body: JSON.stringify({
       id: todo.id,
       title: todo.title,
+      description: todo.description,
       completed: todo.completed,
     }),
   }).then((res) => res.json());

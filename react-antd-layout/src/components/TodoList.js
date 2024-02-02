@@ -25,6 +25,20 @@ const TodoList = () => {
     message.success("Todo added!!");
   };
 
+  const handleClick = () => {
+    todos.forEach((todo) => {
+      handleAllRemoveTodos(todo);
+    });
+    message.info("All Todos cleared");
+    setActiveTodos([]);
+    setTodos([]);
+    setCompletedTodos([]);
+  };
+
+  const handleAllRemoveTodos = (todo) => {
+    deleteTodo(todo.id).then(onRefresh());
+  };
+
   const handleRemoveTodo = (todo) => {
     deleteTodo(todo.id).then(onRefresh());
     message.info("Todo item removed");
@@ -49,6 +63,7 @@ const TodoList = () => {
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     let data = await loadTodos();
+    console.log(data);
     setTodos(data);
     setActiveTodos(data.filter((todo) => todo.completed === false));
     setCompletedTodos(data.filter((todo) => todo.completed === true));
@@ -92,13 +107,11 @@ const TodoList = () => {
                   />
                 </TabPane>
               </Tabs>
-              <Button className="btn" onClick={() => {
-                
-              }}>
-                Clear All
-              </Button>
             </Col>
           </Row>
+          <Button className="btn" onClick={() => handleClick()}>
+            Clear All
+          </Button>
         </div>
       </Content>
     </Layout>

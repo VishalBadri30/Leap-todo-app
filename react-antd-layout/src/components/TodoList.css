@@ -9,5 +9,6 @@
 
 .btn {
   position: absolute;
-  bottom: 1px;
+  bottom: 25px;
+  left: 25%;
 }

@@ -8,9 +8,9 @@ const TodoForm = ({ onFormSubmit }) => {
   const onFinish = () => {
     onFormSubmit({
       title: form.getFieldValue("title"),
+      description: form.getFieldValue("description"),
       completed: false,
     });
-    console.log(form.getFieldValue);
     form.resetFields();
   };
 
@@ -28,6 +28,12 @@ const TodoForm = ({ onFormSubmit }) => {
             rules={[{ required: true, message: "This field is required" }]}
           >
             <Input placeholder="What needs to be done" />
+          </Form.Item>
+          <Form.Item
+            name={"description"}
+            rules={[{ required: true, message: "Description is required" }]}
+          >
+            <Input placeholder="Enter desciption" />
           </Form.Item>
         </Col>
         <Col xs={24} sm={24} md={7} lg={5} xl={4}>
