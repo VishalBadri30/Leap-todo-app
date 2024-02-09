@@ -24,19 +24,11 @@
   <p>Open todosapi on any IDE(preferred - IntelliJ) and run the application</p>
   <div>
     <h3>Note</h3>
-    <p>Make sure to include <b>Yours</b></p> 
-    <p><h4>Mine</h4>spring.datasource.url = jdbc:postgresql://localhost:5432/leap-todo</p>
-    <p><h4>Yours</h4>spring.datasource.url = jdbc:postgresql://localhost:<b>Your Port from pgAdmin4</b>/leap-todo</p>
-    <h4>Mine</h4>
-    <p>spring.datasource.username=postgres</p>
-    <h4>Yours</h4>
-    <p>spring.datasource.username=<b>Your username</b></p>
-    <h4>Mine</h4>
-    <p>spring.datasource.password=password</p>
-    <h4>Yours</h4>
-     <p>spring.datasource.password=<b>Your password</b></p>
+    <p>Make sure to include <b>the following code according to user</b></p> 
+    <p>spring.datasource.url = jdbc:postgresql://localhost:<b> Port number from pgAdmin4 </b>/leap-todo</p>
+    <p>spring.datasource.username=<b> username </b></p>
+    <p>spring.datasource.password=<b> password </b></p>
   </div>
-  
   <p>The backend will run on http://localhost:8080</p>
   <p>The data will be visible on http://localhost:8080/todos</p>
   <ol>
